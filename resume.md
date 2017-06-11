@@ -55,7 +55,8 @@ Project Name | Description | Role
 - [Heatseeking 密钥管理微服务](https://github.com/whoszus/HeatSeeking)
 
 ### 项目简介 
-    springboot构建的密钥管理服务。提供口令管理功能，
+    springboot构建的密钥管理服务。在各个平台、网站注册的账户很多，许多网面临脱库的风险，如果把密码全部设置为同样的，一旦一个网站泄露，那就意味着所有的网站都要修改。如果密码设置不一样，那么，数量众多的密码那一管理。
+    
 ### 主要功能 
 
 
