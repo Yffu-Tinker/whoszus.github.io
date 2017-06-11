@@ -7,7 +7,7 @@
 ---
 ## 个人信息
 
- - 林彦颖/男/1993 
+ - Tinker/男/1993 
  - 本科/西南科技大学 
  - 工作年限：2年 
  - 期望职位：Java后台开发工程师
@@ -26,16 +26,15 @@
     - 熟练编写常用sql语句，有一定的MySQL数据库表设计和优化经验；
     - 熟练使用memcached等缓存。
 - 信息安全
-    - 熟悉f 
+    - 熟悉常用的信息搜集工具；
+    - 熟悉linux系统；
+    - 对网络攻击行为特征有分析经验
  
 ---
 
-## 工作经历 n  
+## 工作经历
 
 ### 高新兴科技集团股份有限公司（ 2015-08 ~ 至今 ）
-
- 
-
 
 Project Name | Description | Role
 ---|---|---
@@ -53,11 +52,10 @@ Project Name | Description | Role
 
 ## 开源项目
 
-### 项目名称 
-[heatseeking 密钥管理](https://github.com/whoszus/HeatSeeking)
+- [Heatseeking 密钥管理微服务](https://github.com/whoszus/HeatSeeking)
 
 ### 项目简介 
-    基于
+    springboot构建的密钥管理服务。提供口令管理功能，
 ### 主要功能 
 
 
