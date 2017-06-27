@@ -40,7 +40,9 @@
 
 ```
     /**
-    * S save(S entity)实现方式
+    * S save(S entity)实现方式 
+    * 如果判断数据库中有此对象，则 em.merge(entity) 此方法在下一个文章解析；
+    *
     **/
     @Transactional
     public <S extends T> S save(S entity) {
@@ -53,7 +55,9 @@
     }
     
     /**
-    * 判断实体是否已经存在
+    * 判断实体是否已经存在 isNew(S entity)
+    * 1. 方法也是一个复杂的调用过程 ..
+    * 2. 会在另外一篇文章中解析；
     **/
     public boolean isNew(T entity) {
         if(this.versionAttribute != null && !this.versionAttribute.getJavaType().isPrimitive()) {
@@ -66,8 +70,65 @@
     }
     
     
-    
+    /**
+    * em.persist(entity) 方法解析
+    * package org.hibernate.jpa.spi;
+    * 
+    **/
+    @Override
+	public void persist(Object entity) {
+		checkOpen();
+		try {
+			internalGetSession().persist( entity );
+		}
+		catch ( MappingException e ) {
+			throw convert( new IllegalArgumentException( e.getMessage() ) ) ;
+		}
+		catch ( RuntimeException e ) {
+			throw convert( e );
+		}
+	}
+	
     
 ```
+
+到此，JPA save(S entitis) 过程中id判断发生在哪一阶段问题解决。调用持久化的List JPA 不会在内存中过滤，而是不断的判断此ID是否在数据库中存在。isNew(entity)?persist(entity):merge(entity);
+
+接下来，继续看save过程中到底怎么调用、调用了底层哪些方法；
+
+
+```
+   /**
+    * persist(entity) 
+    * package javax.persistence; 接口声明在EntityManager中 
+    * package org.hibernate.jpa.spi; 具体实现在AbstractEntityManagerImpl implements HibernateEntityManagerImplementor
+    **/
+    
+    /**
+    *  2.1 
+    * 首先判断是否开启了session；
+    *   
+    **/
+    @Override
+	public void persist(Object entity) {
+		checkOpen(); 
+		try {
+			internalGetSession().persist( entity );
+		}
+		catch ( MappingException e ) {
+			throw convert( new IllegalArgumentException( e.getMessage() ) ) ;
+		}
+		catch ( RuntimeException e ) {
+			throw convert( e );
+		}
+	}
+	
+	
+```
+
+
+
+
+
 
 
