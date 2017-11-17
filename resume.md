@@ -1,8 +1,8 @@
-## 联系方式
+联系方式
 
 - 手机：156-2277-5237
 - Email：top.thewave@gmail.com
-- GitHub：[https://github.com/whoszus/](https://github.com/whoszus/)
+- $GitHub：$[https://github.com/whoszus/](https://github.com/whoszus/)
 
 ---
 ## 个人信息
@@ -47,9 +47,9 @@
 
 ### 广州悠派科技（ 2015-03 ~ 2015-08 ）
 
-| Project Name | Description                              | Role                                     |
-| ------------ | ---------------------------------------- | ---------------------------------------- |
-| 微信消息处理后台     | 使用Spring+SpringMVC+myBatis开发的微信消息处理后台，提供包括用户接口、红包接口、消息转发等多种功能。 | <br>1. 微信用户接口的封装；</br> <br>2. AOP处理调用日志；</br><br>3. 公共接口开发</br> |
+| Project Name | Description                              | Role                               |
+| ------------ | ---------------------------------------- | ---------------------------------- |
+| 微信消息处理后台     | 使用Spring+SpringMVC+myBatis开发的微信消息处理后台，提供包括用户接口、红包接口、消息转发等多种功能。 | 1. 微信用户接口的封装2. AOP处理调用日志；3. 公共接口开发 |
 
 
 ## 开源项目
