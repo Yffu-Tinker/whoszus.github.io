@@ -1,6 +1,8 @@
 ```shell
 #docker start shell 
-docker run -it -d --net=host --privileged=true -v /home/files:/home/tinker/temp --restart=always -name tinker-files-server tinker-nginx:finish 
+docker run -it -d --net=host --privileged=true -v /home/files:/home/tinker/temp \
+join --addr 127.0.0.1:2375
+--restart=always --name tinker-files-server tinker-nginx:finish 
 
 #开机启动docker服务 
 systemctl enable docker.service

@@ -1,9 +1,6 @@
 rm -rf /home/tinker/tools;
 yum -y groupinstall development && yum -y install zlib-devel;
-yum -y install lua-devel;
-yum -y install pcre-devel openssl openssl-devel;
-yum -y install openssl-devel;
-yum -y install  gd-devel;
+yum -y install  gd-devel openssl-devel pcre-devel openssl openssl-devel  lua-devel; 
 export LUAJIT_LIB=/opt/luajit/lib && export LUAJIT_INC=/opt/luajit/include/luajit-2.0;
 mkdir -p /home/tinker/tools && cd /home/tinker/tools;
 git clone -b 2.2 https://github.com/vkholodkov/nginx-upload-module && git clone https://github.com/simpl/ngx_devel_kit && git clone https://github.com/openresty/lua-nginx-module;
