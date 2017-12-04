@@ -1,8 +1,10 @@
 ```shell
+ # portainer start shell
+ docker run -d -p 9000:9000 --privileged=true --name=portainer -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock
+
+
 #docker start shell 
-docker run -it -d --net=host --privileged=true -v /home/files:/home/tinker/temp \
-join --addr 127.0.0.1:2375
---restart=always --name tinker-files-server tinker-nginx:finish 
+    docker run -it -d --net=host --privileged=true -v /home/files:/home/tinker/temp --restart=always --name tinker-files-server tinker-nginx:finish 
 
 #开机启动docker服务 
 systemctl enable docker.service
@@ -17,6 +19,5 @@ docker ps -qa | xargs -n 1 docker rm
 # 该脚本可以将 --registry-mirror 加入到你的 Docker 配置文件 /etc/docker/daemon.json 中
 # 此处有个问题：  vim /etc/docker/daemon.json 需要删除这个文件里面最后一个逗号.....
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://33fbba7b.m.daocloud.io
-
 ```
 

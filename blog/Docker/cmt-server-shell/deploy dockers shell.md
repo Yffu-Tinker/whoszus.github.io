@@ -1,5 +1,11 @@
 ```shell
-    docker run -ti -d --restart=always --name shipyard-rethinkdb rethinkdb
+    As mentioned, Shipyard uses RethinkDB for the datastore. First we will launch a RethinkDB container.
+    $> docker run \
+        -ti \
+        -d \
+        --restart=always \
+        --name shipyard-rethinkdb \
+        rethinkdb
     
     Datastore
     As mentioned, Shipyard uses RethinkDB for the datastore. First we will launch a RethinkDB container.
